@@ -1,15 +1,15 @@
-curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'
+`curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'`
 
-Remember replace USER with your username and REPO with your repository/application name!
+## Remember replace USER with your username and REPO with your repository/application name!
 
-```cd yourNewRepo```
+```mkdir yourNewRepo && cd yourNewRepo```
 
 ```git init```
 
 ```git remote add origin https://github.com/USER/REPO.git```
 
-```git add```
+```git add *```
 
-```git commit```
+```git commit -m "intial commit"```
 
 ```git push origin master```
