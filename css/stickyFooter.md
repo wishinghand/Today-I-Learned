@@ -1,6 +1,6 @@
 Make sure you have a `<main>` element or else it won't work.
 
-`body {
+```body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -8,4 +8,4 @@ Make sure you have a `<main>` element or else it won't work.
 
   main {
     flex: 1 0 auto;
-  }`
+  }```

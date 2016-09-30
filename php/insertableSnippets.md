@@ -1,6 +1,6 @@
 Create a folder /site/tags/ and save this as snippet.php
 
-`<?php
+```<?php
 kirbytext::$tags['snippet'] = array(
   'attr' => array(
   ),
@@ -8,8 +8,6 @@ kirbytext::$tags['snippet'] = array(
     $file =  $tag->attr('snippet');
     return snippet($file, array(), true);
   }
-);`
+);```
 
-To invoke it in your kirbytext field, type:
-
-`(snippet: my-snippet)`
+To invoke it in your kirbytext field, type: `(snippet: my-snippet)`

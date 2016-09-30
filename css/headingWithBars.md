@@ -1,13 +1,15 @@
 If you have a centered heading and want lines on either side that are responsive, use this HTML template:
 
-`<div class="containerRow">
+```<div class="containerRow">
         <div class="headingBar"></div>
         <div class="heading">Latest Deals</div>
         <div class="headingBar"></div>
-  </div>`
+  </div>```
+
 
   and CSS (remember to prefx):
-  `.headingBar{
+  
+  ```.headingBar{
     background-color: white;
     height: 5px;
     flex-grow: 1;
@@ -30,4 +32,4 @@ If you have a centered heading and want lines on either side that are responsive
     justify-content: center;
     align-content: center;
     align-items: center;
-}`
+}```
