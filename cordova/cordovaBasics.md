@@ -1,8 +1,10 @@
+```
 cordova run ios --device
 cordova run android --device
 cordova plugin add cordova-plugin-statusbar
 cordova run android —list (see all android emulators/devices)
 bundle identifier has to match exactly
+```
 
 find attached USB devices: system_profiler SPUSBDataType
 

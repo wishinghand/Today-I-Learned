@@ -1,60 +1,84 @@
 # Basics
 create a new user:
-```adduser demo```
+```
+adduser demo
+```
 
 Sudo permission for new user
-```gpasswd -a demo sudo```
+```
+gpasswd -a demo sudo
+```
 
 Restrict root login, restart SSH
-```nano /etc/ssh/sshd_config```
-```service ssh restart```
+```
+nano /etc/ssh/sshd_config
+service ssh restart
+```
 
 Start firewall, allowing port 25, 80, 443, enable it
-```sudo ufw allow ssh```
-```sudo ufw allow 80/tcp```
-```sudo ufw allow 25/tcp```
-```sudo ufw allow 443/tcp```
-```sudo ufw enable```
+```
+sudo ufw allow ssh
+sudo ufw allow 80/tcp
+sudo ufw allow 25/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+```
 
 update/upgrade
-```sudo apt-get update```
-```sudo apt-get upgrade```
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
 
 Set Timezone
-```sudo dpkg-reconfigure tzdata```
+```
+sudo dpkg-reconfigure tzdata
+```
 
 Sync time with NTP
-```sudo apt-get install ntp```
+```
+sudo apt-get install ntp
+```
 
 # Install Let's Encrypt (ubuntu 14)
-```cd /usr/local/sbin```
-```sudo wget https://dl.eff.org/certbot-auto```
-```sudo chmod a+x /usr/local/sbin/certbot-auto```
+```
+cd /usr/local/sbin
+sudo wget https://dl.eff.org/certbot-auto
+sudo chmod a+x /usr/local/sbin/certbot-auto
+```
 
 Going to modify the location mapping:
-```sudo nano /etc/nginx/sites-available/default```
+
+`sudo nano /etc/nginx/sites-available/default`
 
 Add this to your `server` block:
 
-```location ~ /.well-known {
-                allow all;
-        }```
-
-check for nginx syntax errors, then restart:
-```sudo nginx -t```
-```sudo service nginx restart```
-
-Time to have certbot do its thing:
-```certbot-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d example.com -d www.example.com
+```
+location ~ /.well-known {
+    allow all;
+}
 ```
 
+check for nginx syntax errors, then restart:
+```
+sudo nginx -t
+sudo service nginx restart
+```
+
+Time to have certbot do its thing:
+
+`certbot-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d example.com -d www.example.com`
+
 Generate Strong Diffie-Hellman Group:
-```sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048```
+
+`sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048`
 
 Comment out some lines in this file: `sudo nano /etc/nginx/sites-available/default`
 
-```listen 80 default_server;
-        listen [::]:80 default_server ipv6only=on;```
+```
+listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+```
 
 Add these to the server block:
 ```
@@ -77,18 +101,22 @@ listen 443 ssl;
 ```
 
 New server block:
-```server {
+```
+server {
     listen 80;
     server_name example.com www.example.com;
     return 301 https://$host$request_uri;
-}```
+}
+```
 
 Restart nginx: `sudo service nginx restart`
 
 # Setup Auto Renewal
 
 This renews it every Monday at 2:30 am, and reload Nginx at 2:35am
-```certbot-auto renew```
-```sudo crontab -e```
-```30 2 * * 1 /usr/local/sbin/certbot-auto renew >> /var/log/le-renew.log
-35 2 * * 1 /etc/init.d/nginx reload```
+```
+certbot-auto renew
+sudo crontab -e
+30 2 * * 1 /usr/local/sbin/certbot-auto renew >> /var/log/le-renew.log
+35 2 * * 1 /etc/init.d/nginx reload
+```

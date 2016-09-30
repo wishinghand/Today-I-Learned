@@ -5,6 +5,8 @@ Smoother fonts
 `-webkit-font-smoothing: antialiased;`
 
 use it like:
-```html{
+```
+html{
     -webkit-font-smoothing: antialiased;
-}```
+}
+```

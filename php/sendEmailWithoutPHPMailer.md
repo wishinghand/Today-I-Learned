@@ -1,4 +1,5 @@
-```<?php
+```
+<?php
 function mail_attachment($filename, $path, $mailto, $from_mail, $from_name, $replyto, $subject, $message) {
     $file = $path.$filename;
     $file_size = filesize($file);
@@ -28,13 +29,16 @@ function mail_attachment($filename, $path, $mailto, $from_mail, $from_name, $rep
     } else {
         echo "mail send ... ERROR!";
     }
-}```
+}
+```
 
-```$my_file = "somefile.zip";
+```
+$my_file = "somefile.zip";
 $my_path = "/your_path/to_the_attachment/";
 $my_name = "Olaf Lederer";
 $my_mail = "my@mail.com";
 $my_replyto = "my_reply_to@mail.net";
 $my_subject = "This is a mail with attachment.";
 $my_message = "Hallo,\r\ndo you like this script? I hope it will help.\r\n\r\ngr. Olaf";
-mail_attachment($my_file, $my_path, "recipient@mail.org", $my_mail, $my_name, $my_replyto, $my_subject, $my_message);```
+mail_attachment($my_file, $my_path, "recipient@mail.org", $my_mail, $my_name, $my_replyto, $my_subject, $my_message);
+```

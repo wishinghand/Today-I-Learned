@@ -3,7 +3,8 @@
 If I create the following keyboard event listeners for `keydown`,
 `keypress`, and `keyup`:
 
-```javascript
+```
+javascript
 window.addEventListener('keydown', function(e) { console.log("Keydown: " + e.charCode + ", " + e.keyCode); });
 window.addEventListener('keypress', function(e) { console.log("Keypress: " + e.charCode + ", " + e.keyCode); });
 window.addEventListener('keyup', function(e) { console.log("Keyup: " + e.charCode + ", " + e.keyCode); });

@@ -1,3 +1,4 @@
+```
 function mysql_insert_array($table, $data, $exclude = array()) {
     $fields = $values = array();
     if( !is_array($exclude) ) $exclude = array($exclude);
@@ -19,3 +20,4 @@ function mysql_insert_array($table, $data, $exclude = array()) {
         return array( "mysql_error" => mysql_error() );
     }
 }
+```
