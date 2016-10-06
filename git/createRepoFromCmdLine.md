@@ -1,6 +1,7 @@
+## Replace USER with your username and REPO with your repository/application name!
+
 `curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'`
 
-## Remember replace USER with your username and REPO with your repository/application name!
 
 ```mkdir yourNewRepo && cd yourNewRepo```
 
