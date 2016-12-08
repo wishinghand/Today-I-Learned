@@ -1,0 +1,1 @@
+In javascript, `null` is an object with no value and `undefined` is a type.
