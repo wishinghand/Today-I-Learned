@@ -1,4 +1,4 @@
-Heroku basics
+# Heroku basics
 
 `heroku create app_name`
 

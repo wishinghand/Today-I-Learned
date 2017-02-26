@@ -1,3 +1,5 @@
+# Git Branching Basics
+
 make a new branch and switch to it in one command:
 
 `git checkout -b name_of_new_branch`

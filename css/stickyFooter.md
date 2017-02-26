@@ -1,4 +1,6 @@
-Make sure you have a `<main>` element or else it won't work.
+# Easy Sticky Footer
+
+Make sure you have a `<main>` element in your `<body>` or else it won't work.
 
 ```
 body {

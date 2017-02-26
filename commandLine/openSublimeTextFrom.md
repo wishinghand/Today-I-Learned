@@ -1,3 +1,5 @@
+# Open Sublime Text from the Command Line
+
 This binds "sublime" to your PATH, and typing `sublime .` on the command line will open all of the folders in a new Sublime window.
 
 ```

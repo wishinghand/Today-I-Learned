@@ -1,3 +1,5 @@
+# Domain Keys Identified Mail (DKIM)
+
 When using DKIM keys, take off the semicolon at the end from the string supplied by Worxware if you use their service.
 
 They supplied:

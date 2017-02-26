@@ -1,3 +1,5 @@
+# Create a New Repo on Github from the Command Line
+
 ## Replace USER with your username and REPO with your repository/application name!
 
 `curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'`

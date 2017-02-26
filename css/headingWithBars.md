@@ -1,3 +1,5 @@
+# Creating a Header with Responsive Bars on Either Side
+
 If you have a centered heading and want lines on either side that are responsive, use this HTML template:
 
 ```

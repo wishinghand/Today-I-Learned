@@ -1,11 +1,13 @@
-#Max-Width
+# CSS Max- and Min-width Explained
+
+## Max-Width
 
 `@media only screen and (max-width: 330px)  {...}`
 
 Translates to:
 "If [device width] is less than or equal to 330px, then do {...}"
 
-#Min-Width
+## Min-Width
 
 `@media only screen and (min-width: 700px)  {...}`
 
