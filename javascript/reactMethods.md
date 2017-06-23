@@ -12,5 +12,5 @@ From [Scotch.io](https://scotch.io/tutorials/learning-react-getting-started-and-
 - mixins: An array of objects, used to extend the current component’s functionality.
 
 **Const vs Class**
-Const for generic componetn
+Const for generic component
 Class for state that changes
