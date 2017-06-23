@@ -1,3 +1,4 @@
+```
 function titleCase(exampleString){
   var words = exampleString.split(' ')
   var titleCasedWords = words.map((word) => {
@@ -5,3 +6,4 @@ function titleCase(exampleString){
   })
   return titleCasedWords.join(' ')
 }
+```
