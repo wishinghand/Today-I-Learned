@@ -1,6 +1,6 @@
 # The Less-Than-Obvious Selectors in CSS
 
-Descendent: Select all of `B` inside of `A`
+Descendent: Select all of `B` recursively inside of `A`
 
 ```
 A B {
@@ -36,7 +36,7 @@ A ~ B {
 }
 ```
 
-Child: Select all of `B` that is inside of `A`
+Child: Select all of `B` that is a direct child of `A`
 ```
 A > B {
     // CSS rules go here
