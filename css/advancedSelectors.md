@@ -29,7 +29,7 @@ A + B {
 }
 ```
 
-Adjacent Sibling: Select elements that directly follows another
+Adjacent Siblings: Select elements that directly follows another
 ```
 A ~ B {
     // CSS rules go here
